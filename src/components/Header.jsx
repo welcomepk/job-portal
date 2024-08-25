@@ -1,7 +1,6 @@
 
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { Link } from 'react-router-dom'
-import { Button } from './ui/button'
 
 function Header() {
     return (
