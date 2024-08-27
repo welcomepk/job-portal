@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Link } from "react-router-dom"
 import Autoplay from 'embla-carousel-autoplay'
 import comapies from "../data/companies.json"
+import faqs from "../data/faq.json"
 
 
 function LandingPage() {
@@ -54,11 +55,30 @@ function LandingPage() {
             <img src="/banner.jpeg" alt="banner-image"
                 className="w-full"
             />
-            <section>
+            <section className="grid sm:grid-cols-2 gap-4">
                 {/* cards */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle>
+                            For Job Seekers
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Search and apply for jobs, track applications, and more.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>For Employers</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>Post jobs, applications, and find the best candidates.</p>
+                    </CardContent>
+                </Card>
             </section>
 
             {/* Accordians */}
+
         </main>
     )
 }
