@@ -49,8 +49,11 @@ function LandingPage() {
                 {/* <CarouselPrevious />
                 <CarouselNext /> */}
             </Carousel>
-            {/* banner */}
 
+            {/* banner */}
+            <img src="/banner.jpeg" alt="banner-image"
+                className="w-full"
+            />
             <section>
                 {/* cards */}
             </section>
