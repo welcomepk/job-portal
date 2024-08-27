@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
 import { Link } from "react-router-dom"
 import Autoplay from 'embla-carousel-autoplay'
 import comapies from "../data/companies.json"
@@ -78,6 +85,20 @@ function LandingPage() {
             </section>
 
             {/* Accordians */}
+
+            <Accordion type="single" collapsible>
+                {
+                    faqs.map((faq, index) => (
+                        <AccordionItem className="border-b-0 bg-gray-800 rounded-md mb-2 px-8" key={index} value={`item-${index + 1}`}>
+                            <AccordionTrigger>{faq.question}</AccordionTrigger>
+                            <AccordionContent>
+                                {faq.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+
+                    ))
+                }
+            </Accordion>
 
         </main>
     )
